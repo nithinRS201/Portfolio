@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- box icons stylesheet cdn -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #FFC436;
+  --text-color: #333;
+  --main-color: #000000;
+  --white-color: #fdfdfd;
+  --footer-text-color: #D5C9FD;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+/* hr {
+  margin: 50px auto -10px;
+  width: 50px;
+  display: block;
+  border-top: none;
+  opacity: .5;
+  background-color: transparent;
+  border-bottom: 5px dotted var(--text-color);
+} */
+
+span {
+  color: var(--white-color);
+  
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+
+  .profile-img img {
+    position: relative;
+    padding: 10px 0;
+    margin: 20px;
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+
+
+.margin {
+  margin-right: 20px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  color: var(--text-color);
+  transition: .3s ease;
+}
+
+@media only screen and (max-width: 450px) {
+  .name {
+    font-size: 2.4rem;
+    color: var(--text-color);
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+  }
+
+  .about .about-company p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+.profile-section {
+  margin-top: 74px;
+  position: relative;
+  width: inherit;
+}
+
+.profile-img {
+  text-align: center;
+  width: 100%;
+  height: max-content;
+  background: linear-gradient(
+    180deg,
+    var(--main-color) 0%,
+    var(--main-color) 50%,
+    var(--bg-color) 50%,
+    var(--bg-color) 0%
+  );
+}
+
+.profile-img img {
+  position: relative;
+  width: 30%;
+  padding: 0;
+  margin: 30px;
+}
+
+header .profile-section .information {
+  line-height: 2.5;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  width: 100%;
+}
+
+.about, 
+.contact, 
+.gallery-contents {
+  padding-top: 65px;
+}
+
+.about .about-company,
+.contact .contact-me,
+.gallery-contents {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.about .about-company h1,
+.contact .contact-me h1,
+.gallery h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+section .about-company p {
+  width: inherit;
+  text-align: justify;
+}
+
+.contact-link {
+  margin: 10px 40px 10px 0;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.contact-link a {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.contact-link i {
+  text-align: center;
+  padding: 4px;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+.contact-link i:hover {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .contact-link {
+    margin: 10px 20px 10px 0;
+    font-size: 2rem;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact-link {
+    margin: 10px 10px 10px 0;
+    font-size: 2rem;
+    display: inline-block;
+  }
+}
+
+.read-more {
+  display: block;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 8px;
+  border: 2px solid var(--main-color);
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  border-radius: 5px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: var(--main-color);
+  background-color: var(--bg-color);
+}
+
+.gallery-contents {
+  padding-bottom: 40px;
+}
+
+.carousel-inner .carousel-item {
+  width: 100%;
+  height: 540px;
+}
+
+.carousel-inner .carousel-item img {
+  width: auto;
+  height: inherit;
+}
+
+footer {
+  background: var(--main-color);
+}
+
+.details {
+  text-align: center;
+  margin: 0;
+  padding: 8px;
+}
+
+.details div {
+  margin: 10px auto;
+}
+
+.details a {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--footer-text-color);
+  margin: 10px;
+  transition: 0.5s ease;
+}
+
+.details a:hover {
+  color: var(--white-color);
+}
+
+.details p {
+  font-size: .9rem;
+  margin: 10px auto;
+  color: var(--footer-text-color);
+}
+
+@media only screen and (max-width: 450px) {
+  footer .details {
+    text-align: center;
+    margin: 0;
+    padding: 6px;
+  }
+
+  .details a {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--footer-text-color);
+    margin: 10px;
+    transition: 0.5s ease;
+  }
+
+  .details div {
+    margin: 8px auto;
+  }
+
+  .details p {
+    font-size: 0.8rem;
+    margin: 8px auto;
+    color: var(--footer-text-color);
+  }
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: #FFC436; font-weight: 800; font-size: 2rem;">Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="margin-left: auto;">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active margin" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link margin" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link margin" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link margin" href="#gallery">Gallery</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <header>
+        <div class="profile-section">
+            <div class="profile-img">  
+                <img src="nithin/WhatsApp Image 2023-08-21 at 12.28.37 PM.jpeg" alt="profile image"/>
+            </div>
+            <div class="information">
+                <h1 class="name">Nithin R Swamy</h1>
+                <h2>Software Engineer</h2>
+                <h2>BMSIT&M</h2>
+            </div>  
+        </div>
+      </header>
+    
+      <!-- <hr> -->
+    
+      <section class="about" id="about">
+          <div class="about-company">
+              <h1>About <span>Company</span></h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                  aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                  aliquip ex ea commodo consequat.</p>
+                <a href="#" style="display: inline-block;"><button class="read-more">Read More</button></a>
+          </div>
+      </section>
+    
+      <!-- <hr> -->
+    
+      <section class="contact" id="contact">
+          <div class="contact-me">
+              <h1>Contact <span>Me</span></h1><br>
+              <div class="contact-btns">
+                <div class="contact-link">
+                    <a href="https://www.linkedin.com/in/nithin-r-swamy-346709253" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <div class="contact-link">
+                    <a href="https://github.com/nithinRS201/" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+                <div class="contact-link">
+                    <a href="mailto: 1by20cs129@bmsit.in" target="_blank"><i class='bx bxl-gmail'></i></a>
+                </div>
+                <div class="contact-link">
+                    <a href="https://instagram.com/nithin__rs?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+                <div class="contact-link">
+                  <a href="https://www.facebook.com/nithin.ranjan.9?mibextid=ZbWKwL" target="_blank"><i class='bx bxl-facebook'></i></a>
+                </div>
+                <div class="contact-link">
+                  <a href="#" target="_self"><i class='bx bxl-twitter'></i></a>
+                </div>
+                <div class="contact-link">
+                  <a href="https://t.me/Nithin181" target="_blank"><i class='bx bxl-telegram'></i></a>
+                </div>
+                <div class="contact-link">
+                  <a href="#" target="_self"><i class='bx bxl-youtube'></i></a>
+                </div>
+                <div class="contact-link">
+                    <a href="#" target="_self"><i class='bx bxs-map'></i></a>
+                  </div>
+                  <div class="contact-link">
+                    <a href="#" target="_self"><i class='bx bxl-whatsapp-square' ></i></a>
+                  </div>
+              </div>
+          </div>
+      </section>
+    
+      <!-- <hr> -->
+    
+      <section class="gallery" id="gallery">
+        <div class="gallery-contents">
+          <h1>Gallery</h1>
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="nithin/1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="nithin/2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="nithin/3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    
+      <footer>
+        <section class="details">
+          <div>
+            <a href="" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/nithin-r-swamy-346709253" target="_blank">LinkedIn</a>
+            <a href="https://github.com/nithinRS201/" target="_blank">Github</a>
+          </div>
+          <p>&copy; 2023 - All Rights Reserved.</p>
+        </section>
+      </footer>
+    
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>
